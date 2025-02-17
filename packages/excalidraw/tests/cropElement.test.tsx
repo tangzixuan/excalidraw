@@ -316,6 +316,7 @@ describe("Cropping and other features", async () => {
 
     const canvas = await exportToCanvas({
       elements: [image],
+      // @ts-ignore
       appState: h.state,
       files: h.app.files,
       exportPadding: 0,
@@ -326,6 +327,7 @@ describe("Cropping and other features", async () => {
 
     const svg = await exportToSvg({
       elements: [image],
+      // @ts-ignore
       appState: h.state,
       files: h.app.files,
       exportPadding: 0,

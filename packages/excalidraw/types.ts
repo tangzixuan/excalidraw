@@ -41,6 +41,7 @@ import type { ContextMenuItems } from "./components/ContextMenu";
 import type { SnapLine } from "./snapping";
 import type { Merge, MaybePromise, ValueOf, MakeBrand } from "./utility-types";
 import type { StoreActionType } from "./store";
+import type { UserIdleState } from "./constants";
 
 export type SocketId = string & { _brand: "SocketId" };
 
@@ -589,12 +590,6 @@ export type SceneData = {
   collaborators?: Map<SocketId, Collaborator>;
   storeAction?: StoreActionType;
 };
-
-export enum UserIdleState {
-  ACTIVE = "active",
-  AWAY = "away",
-  IDLE = "idle",
-}
 
 export type ExportOpts = {
   saveFileToDisk?: boolean;
