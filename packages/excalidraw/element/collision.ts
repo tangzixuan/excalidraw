@@ -5,9 +5,9 @@ import type {
 } from "./types";
 import { getElementBounds } from "./bounds";
 import type { FrameNameBounds } from "../types";
-import type { GeometricShape } from "../../utils/geometry/shape";
-import { getPolygonShape } from "../../utils/geometry/shape";
-import { isPointInShape, isPointOnShape } from "../../utils/collision";
+import type { GeometricShape } from "@excalidraw/utils/geometry/shape";
+import { getPolygonShape } from "@excalidraw/utils/geometry/shape";
+import { isPointInShape, isPointOnShape } from "@excalidraw/utils/collision";
 import { isTransparent } from "../utils";
 import {
   hasBoundTextElement,
@@ -16,8 +16,8 @@ import {
   isTextElement,
 } from "./typeChecks";
 import { getBoundTextShape, isPathALoop } from "../shapes";
-import type { GlobalPoint, LocalPoint, Polygon } from "../../math";
-import { isPointWithinBounds, pointFrom } from "../../math";
+import type { GlobalPoint, LocalPoint, Polygon } from "@excalidraw/math";
+import { isPointWithinBounds, pointFrom } from "@excalidraw/math";
 
 export const shouldTestInside = (element: ExcalidrawElement) => {
   if (element.type === "arrow") {

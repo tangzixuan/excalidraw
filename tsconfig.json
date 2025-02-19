@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "rootDir": "./",
     "target": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -15,11 +16,16 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "baseUrl": ".",
     "paths": {
       "@excalidraw/excalidraw": ["./packages/excalidraw/index.tsx"],
-      "@excalidraw/excalidraw/*": ["./packages/excalidraw/*"]
+      "@excalidraw/utils": ["./packages/utils/index.ts"],
+      "@excalidraw/math": ["./packages/math/index.ts"],
+      "@excalidraw/excalidraw/*": ["./packages/excalidraw/*"],
+      "@excalidraw/utils/*": ["./packages/utils/*"],
+      "@excalidraw/math/*": ["./packages/math/*"],
     }
   },
   "include": ["packages", "excalidraw-app"],
-  "exclude": ["examples", "packages/*/dist/**/*"]
+  "exclude": ["examples", "dist", "types", "tests"]
 }

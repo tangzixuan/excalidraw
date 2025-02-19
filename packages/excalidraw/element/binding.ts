@@ -1,8 +1,8 @@
-import * as GA from "../../math/ga/ga";
-import * as GAPoint from "../../math/ga/gapoints";
-import * as GADirection from "../../math/ga/gadirections";
-import * as GALine from "../../math/ga/galines";
-import * as GATransform from "../../math/ga/gatransforms";
+import * as GA from "@excalidraw/math/ga/ga";
+import * as GAPoint from "@excalidraw/math/ga/gapoints";
+import * as GADirection from "@excalidraw/math/ga/gadirections";
+import * as GALine from "@excalidraw/math/ga/galines";
+import * as GATransform from "@excalidraw/math/ga/gatransforms";
 
 import type {
   ExcalidrawBindableElement,
@@ -31,7 +31,7 @@ import type {
 import type { Bounds } from "./bounds";
 import { getCenterForBounds, getElementAbsoluteCoords } from "./bounds";
 import type { AppState } from "../types";
-import { isPointOnShape } from "../../utils/collision";
+import { isPointOnShape } from "@excalidraw/utils/collision";
 import {
   isArrowElement,
   isBindableElement,
@@ -66,7 +66,7 @@ import {
   vectorToHeading,
   type Heading,
 } from "./heading";
-import type { LocalPoint, Radians } from "../../math";
+import type { LocalPoint, Radians } from "@excalidraw/math";
 import {
   lineSegment,
   pointFrom,
@@ -76,8 +76,8 @@ import {
   pointFromPair,
   pointDistanceSq,
   clamp,
-} from "../../math";
-import { segmentIntersectRectangleElement } from "../../utils/geometry/shape";
+} from "@excalidraw/math";
+import { segmentIntersectRectangleElement } from "@excalidraw/utils/geometry/shape";
 
 export type SuggestedBinding =
   | NonDeleted<ExcalidrawBindableElement>
